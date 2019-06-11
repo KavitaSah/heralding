@@ -29,7 +29,7 @@ activity_logging:
 
 # protocols to enable
 capabilities:
-  ftp:
+/*ftp:
     enabled: true
     port: 21
     timeout: 30
@@ -45,12 +45,12 @@ capabilities:
     protocol_specific_data:
       max_attempts: 3
 
-  pop3:
+pop3:
     enabled: true
     port: 110
     timeout: 30
     protocol_specific_data:
-      max_attempts: 3
+      max_attempts: 3 ###
 
   pop3s:
     enabled: true
@@ -116,7 +116,7 @@ capabilities:
     port: 80
     timeout: 30
     protocol_specific_data:
-      banner: ""
+      banner: ""  */
 
   https:
     enabled: true
@@ -137,7 +137,7 @@ capabilities:
         valid_days: 365
         serial_number: 0
 
-  smtp:
+/*smtp:
     enabled: true
     port: 25
     timeout: 30
@@ -154,4 +154,4 @@ capabilities:
   socks5:
     enabled: true
     port: 1080
-    timeout: 30
+    timeout: 30 */
