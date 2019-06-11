@@ -192,7 +192,7 @@ class Honeypot:
     @staticmethod
     def create_ssl_context(pem_file):
         ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
-        ssl_context.options = ssl.OP_NO_TLSv1_3
+        ssl_context.options &= ssl.OP_NO_TLSv1_3
         ssl_context.check_hostname = False
         ssl_context.load_cert_chain(pem_file)
         ssl_context.set_ciphers('TLSv1.2:-DH:-ECDHE:-PSK:-NULL:-CAMELLIA')  
